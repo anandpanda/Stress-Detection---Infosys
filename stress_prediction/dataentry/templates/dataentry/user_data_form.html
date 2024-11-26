@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>User Data Input Form</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				font-family: "Poppins", sans-serif;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				background: linear-gradient(135deg, #1845ad, #23a2f6);
+			}
+			.form-container {
+				background-color: #ffffff;
+				width: 500px;
+				padding: 40px;
+				border-radius: 12px;
+				box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+			}
+			h2 {
+				text-align: center;
+				margin-bottom: 20px;
+				color: #1845ad;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			table,
+			th,
+			td {
+				border: none;
+			}
+			th,
+			td {
+				padding: 12px 15px;
+				text-align: left;
+			}
+			th {
+				font-weight: 600;
+				color: #555;
+				font-size: 16px;
+			}
+			td input {
+				width: 100%;
+				padding: 10px;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				font-size: 15px;
+				color: #333;
+			}
+			.submit-btn {
+				width: 100%;
+				padding: 12px;
+				background-color: #1845ad;
+				color: white;
+				font-size: 18px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: background 0.3s;
+			}
+			.submit-btn:hover {
+				background-color: #23a2f6;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="form-container">
+			<h2>User Data Input Form</h2>
+			<form method="POST">
+				{% csrf_token %}
+				<table>
+					<tr>
+						<th>Snoring Rate [46 - 98]</th>
+						<td>
+							<input
+								type="number"
+								name="snoring_rate"
+								step="0.1"
+								min="46"
+								max="98"
+								required
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th>Respiratory Rate [15 - 30]</th>
+						<td>
+							<input
+								type="number"
+								name="respiratory_rate"
+								step="0.1"
+								min="15"
+								max="30"
+								required
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th>Body Temperature [86 - 98]</th>
+						<td>
+							<input
+								type="number"
+								name="body_temperature"
+								step="0.1"
+								min="86"
+								max="98"
+								required
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th>Limb Movement [5 - 18]</th>
+						<td>
+							<input
+								type="number"
+								name="limb_movement"
+								step="0.1"
+								min="5"
+								max="18"
+								required
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th>Blood Oxygen [84 - 96]</th>
+						<td>
+							<input
+								type="number"
+								name="blood_oxygen"
+								step="0.1"
+								min="84"
+								max="96"
+								required
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th>Eye Movement [60 - 105]</th>
+						<td>
+							<input
+								type="number"
+								name="eye_movement"
+								step="0.1"
+								min="60"
+								max="105"
+								required
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th>Sleep Hours [0 - 9]</th>
+						<td>
+							<input
+								type="number"
+								name="sleep_hours"
+								step="0.1"
+								min="0"
+								max="9"
+								required
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th>Heart Rate [52 - 84]</th>
+						<td>
+							<input
+								type="number"
+								name="heart_rate"
+								step="1"
+								min="52"
+								max="84"
+								required
+							/>
+						</td>
+					</tr>
+				</table>
+				<button
+					href="{% url 'user_data_form' %}"
+					type="submit"
+					class="submit-btn"
+				>
+					Am I Stressed?
+				</button>
+			</form>
+		</div>
+	</body>
+</html>

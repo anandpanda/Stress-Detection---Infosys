@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Stress Detection & Prevention</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				font-family: "Poppins", sans-serif;
+				background-color: #f0f4f8;
+				color: #333;
+			}
+			.header {
+				background: linear-gradient(to right, #1845ad, #23a2f6);
+				padding: 60px 20px;
+				color: white;
+				text-align: center;
+			}
+			.header h1 {
+				font-size: 48px;
+				margin-bottom: 10px;
+			}
+			.header p {
+				font-size: 18px;
+			}
+			.tagline {
+				text-align: center;
+				margin: 40px 0;
+				font-size: 24px;
+				font-weight: 600;
+				color: #1845ad;
+			}
+			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				max-width: 1200px;
+				margin: auto;
+				padding: 20px;
+			}
+			.section {
+				background-color: white;
+				border-radius: 10px;
+				padding: 30px;
+				margin: 20px 0;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				width: 100%;
+				max-width: 800px;
+				text-align: center;
+			}
+			.section img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+			.section h2 {
+				font-size: 28px;
+				color: #1845ad;
+				margin-bottom: 10px;
+			}
+			.section p {
+				font-size: 16px;
+				color: #555;
+				line-height: 1.6;
+				margin-bottom: 20px;
+			}
+			.cta-button {
+				display: inline-block;
+				padding: 12px 24px;
+				background-color: #1845ad;
+				color: white;
+				border-radius: 5px;
+				font-size: 18px;
+				text-decoration: none;
+				transition: background 0.3s;
+			}
+			.cta-button:hover {
+				background-color: #23a2f6;
+			}
+			.footer {
+				margin-top: 40px;
+				text-align: center;
+				color: #666;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Header Section -->
+		<div class="header">
+			<h1>Understand & Manage Stress Better</h1>
+			<p>
+				Learn how to detect and manage stress with our AI-powered tool
+			</p>
+		</div>
+
+		<!-- Tagline -->
+		<div class="tagline">
+			"Take control of your stress with our app's stress
+			detection/prediction and prevention insights."
+		</div>
+
+		<div class="container">
+			<!-- What is Stress Section -->
+			<div class="section">
+				<h2>What is Stress?</h2>
+				<p>
+					Stress is a natural response to challenging situations,
+					which can help motivate and prepare you to face dangers or
+					difficult tasks. However, when stress becomes overwhelming,
+					it can negatively impact your mental and physical health.
+				</p>
+				<img
+					src="https://images.everydayhealth.com/images/seo-graphic-content-initiative/eh-how-stress-affects-the-body-seo-graphics.png?w=1110"
+					alt="Stress Image"
+				/>
+			</div>
+
+			<!-- Preventing Stress Section -->
+			<div class="section">
+				<h2>How to Prevent Stress?</h2>
+				<p>
+					Taking simple steps like maintaining a balanced lifestyle,
+					practicing relaxation techniques, and staying organized can
+					reduce stress levels. Physical activities, mindfulness, and
+					a good support system are key factors in stress prevention.
+				</p>
+				<img
+					src="https://www.brightpoint-md.com/wp-content/uploads/2023/09/Post-2.jpg"
+					alt="Preventing Stress"
+				/>
+			</div>
+
+			<!-- Dealing with Stress Section -->
+			<div class="section">
+				<h2>What to Do if You're Stressed?</h2>
+				<p>
+					When stress becomes overwhelming, it's essential to take a
+					step back and relax. Engage in activities you enjoy, talk to
+					friends or family, and consider using stress-relief
+					techniques like deep breathing, meditation, or taking a
+					short walk.
+				</p>
+				<img
+					src="https://blog.thefabulous.co/wp-content/uploads/2019/07/high_res-1-2.jpg"
+					alt="Dealing with Stress"
+				/>
+			</div>
+
+			<!-- Call-to-Action Section -->
+			<div class="section">
+				<h2>Check Your Stress Levels</h2>
+				<p>
+					Our app can help you detect early signs of stress through
+					advanced AI algorithms. Regular check-ups with our app can
+					give you valuable insights and help you manage stress
+					better.
+				</p>
+				<a class="cta-button" href="{% url 'user_data_form' %}">Get Started</a>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="footer">
+			&copy; 2024 Stress Detection App. All rights reserved.
+		</div>
+	</body>
+</html>

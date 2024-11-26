@@ -1,0 +1,110 @@
+<!-- templates/predict/predict-recommend.html -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Prediction Result</title>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+		/>
+		<style>
+			body {
+				font-family: "Roboto", sans-serif;
+				background-color: #f0f8ff;
+				color: #333;
+				margin: 0;
+				padding: 0;
+			}
+
+			.container {
+				width: 80%;
+				max-width: 800px;
+				margin: 50px auto;
+				padding: 20px;
+				background-color: #fff;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			}
+
+			.result {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			.result h1 {
+				font-size: 2.5rem;
+				margin-bottom: 10px;
+			}
+
+			.result p {
+				font-size: 1.2rem;
+				color: #555;
+			}
+
+			.points {
+				margin-top: 20px;
+				padding: 20px;
+				background-color: #fafafa;
+				border-left: 5px solid #4caf50;
+			}
+
+			.points ul {
+				list-style-type: none;
+				padding: 0;
+			}
+
+			.points li {
+				font-size: 1rem;
+				margin: 10px 0;
+			}
+
+			.btn-back {
+				display: block;
+				margin-top: 30px;
+				max-width: 760px;
+				padding: 10px 20px;
+				background-color: #4caf50;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				text-align: center;
+				width: 100%;
+				font-size: 1.2rem;
+				cursor: pointer;
+				text-decoration: none;
+			}
+
+			.btn-back:hover {
+				background-color: #45a049;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="result">
+				<h1>{{ result_message }}</h1>
+				<p>Stay calm and follow the advice below.</p>
+			</div>
+
+			<div class="points">
+				<h3>What You Can Do:</h3>
+				<ul>
+					{% for point in additional_info %}
+					<li>{{ point }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<a
+				href="{% url 'user_data_form' %}"
+				class="btn-back"
+				>Go Back to Form</a
+			>
+		</div>
+	</body>
+</html>
